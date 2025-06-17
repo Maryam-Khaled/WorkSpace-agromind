@@ -35,7 +35,7 @@ import Herbicides from "./pages/Herbicides";
 import OrganicPesticides from "./pages/OrganicPesticides";
 import Fertilizers from "./pages/Fertilizers";
 import ShopChemicals from "./pages/ShopChemicals";
-import Insecticides from "./pages/insecticides.JSX";
+import Insecticides from "./pages/Insecticides.jsx";
 import ShopByCategory from "./pages/ShopByCategory";
 import RecommendPlan from "./pages/RecommendPlan";
 import PlanProgress from "./pages/PlanProgress";
@@ -64,7 +64,7 @@ function App() {
         <Route path="/checkout" element={<CheckOut setOrder={setOrder} />} />
         <Route path="/order" element={<Order order={order} />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/checkout" element={<CheckOut setOrder={() => {}} />} />
+        <Route path="/checkout" element={<CheckOut setOrder={() => { }} />} />
         <Route path="/farm-equipment" element={<FarmEquipment />} />
         <Route path="/crop-growing" element={<CropGrowing />} />
         <Route path="/animal-husbandry" element={<AnimalHusbandry />} />
@@ -73,7 +73,7 @@ function App() {
         <Route path="/RecommendPlan" element={<RecommendPlan />} />
         <Route path="/shopChemicals" element={<ShopChemicals />} />
         <Route path="/FarmerPlan" element={<FarmerPlan />} />
-        <Route path="/ViewMyPlans" element={<ViewMyPlans/>} />
+        <Route path="/ViewMyPlans" element={<ViewMyPlans />} />
         <Route path="/category/featured" element={<FeaturedProducts />} />
         <Route path="/category/fertilizers" element={<Fertilizers />} />
         <Route path="/category/organic" element={<OrganicPesticides />} />
