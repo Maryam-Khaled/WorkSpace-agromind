@@ -1,4 +1,4 @@
-// Updated to use correct Azure backend URL via environment variables
+// Updated to use correct Azure backend URL and fixed API endpoints
 const BASE_URL = `${import.meta.env.VITE_API_BASE_URL || "http://localhost:5132"}/api`;
 
 export const addCrop = async (cropData) => {
@@ -34,7 +34,7 @@ export const deleteCrop = async (id) => {
 };
 
 export const getAllCrops = async () => {
-  const response = await fetch(`${BASE_URL}/Crop/GetAllCrops`);
+  const response = await fetch(`${BASE_URL}/Crop/GetCrops`);
   return await response.json();
 };
 
@@ -64,5 +64,28 @@ export const addStep = async (stepData) => {
     body: JSON.stringify(stepData),
   });
 
+  return await response.json();
+};
+
+// Product API functions
+export const getAllProducts = async () => {
+  const response = await fetch(`${BASE_URL}/Product/GetProducts`);
+  return await response.json();
+};
+
+export const getProductById = async (id) => {
+  const response = await fetch(`${BASE_URL}/Product/GetProductById/${id}`);
+  return await response.json();
+};
+
+// Brand API functions
+export const getAllBrands = async () => {
+  const response = await fetch(`${BASE_URL}/Brand/GetAllBrands`);
+  return await response.json();
+};
+
+// Category API functions
+export const getAllCategories = async () => {
+  const response = await fetch(`${BASE_URL}/Category/Categories`);
   return await response.json();
 };
