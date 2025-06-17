@@ -9,6 +9,7 @@ import HealthyLifeSection from "../components/HealthyLifeSection";
 import OrganicSection from "../components/OrganicSection";
 import Categories from "../components/Categories";
 import { useNavigate } from "react-router-dom";
+import heroImage from "../assets/images/index-2.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ function Home() {
   const handleClick2 = () => {
     navigate("/RecommendPlan");
   };
-   const handleClick3 = () => {
+  const handleClick3 = () => {
     navigate("/FarmerPlan");
   };
   const handleClick4 = () => {
@@ -31,7 +32,7 @@ function Home() {
       <div
         className="hero-section position-relative vh-100 w-100"
         style={{
-          backgroundImage: "url('/src/assets/images/index-2.jpg')",
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "100% center",
         }}
