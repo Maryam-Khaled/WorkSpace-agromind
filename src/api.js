@@ -1,4 +1,4 @@
-// Updated to use Azure backend via environment variables
+// Updated to use correct Azure backend URL via environment variables
 const BASE_URL = `${import.meta.env.VITE_API_BASE_URL || "http://localhost:5132"}/api`;
 
 export const addCrop = async (cropData) => {
