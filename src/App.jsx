@@ -41,6 +41,7 @@ import RecommendPlan from "./pages/RecommendPlan";
 import PlanProgress from "./pages/PlanProgress";
 import FarmerPlan from "./pages/FarmerPlan";
 import ViewMyPlans from "./pages/ViewMyPlans";
+import ChatBot from "./components/ChatBot";
 
 function App() {
   const [order, setOrder] = useState(null);
@@ -82,6 +83,7 @@ function App() {
         <Route path="/plan-progress/:planId" element={<PlanProgress />} />
       </Routes>
       <Footer />
+      <ChatBot />
     </Router>
   );
 }
